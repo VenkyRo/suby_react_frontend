@@ -408,109 +408,192 @@ body {
 /*loaderSection*/
 
 .loaderSection{
-  border: 1px solid;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Mobile-Specific Styles */
+
+
 @media (max-width: 576px) {
-  /* Top Bar Adjustments */
+  /* Navbar Adjustments */
   .top-bar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px;
-    height: auto; /* Adjust height for stacking */
+    flex-direction: column; /* Stack elements vertically */
+    padding: 10px;
+    height: auto;
+    text-align: center;
   }
 
-  .top-bar span {
-    font-size: 16px; /* Reduce font size */
+  .left-section, .right-section {
+    margin-bottom: 10px;
   }
 
-  .left-section a {
-    margin-right: 10px;
-    font-size: 14px; /* Smaller font */
-  }
-
-  /* Center Section - Search Bar and Button */
   .center-section {
     flex-direction: column;
-    width: 100%; /* Full width */
-    gap: 5px;
+    gap: 10px;
+    width: 100%;
   }
 
   .center-section .search-bar {
-    width: 100%; /* Full width */
+    width: 100%; /* Full width for smaller screens */
   }
 
   .center-section .button {
-    width: 100%; /* Full width */
+    width: 100%; /* Full width button */
   }
 
-  /* Firm Section Adjustments */
+  /* Landing Section */
+  .landiSection {
+    padding: 5px;
+  }
+
+  
+  /* Item Section */
+.itemSection {
+  display: flex; /* Use flexbox */
+  flex-direction: row; /* Arrange items in a row for horizontal layout */
+  margin-top: 210px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  gap: 10px; /* Add spacing between items */
+  padding: 10px 5px;
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.itemSection::-webkit-scrollbar {
+  height: 8px; /* Horizontal scrollbar height */
+}
+
+.itemSection::-webkit-scrollbar-thumb {
+  background-color: #888; /* Scrollbar thumb color */
+  border-radius: 4px; /* Rounded scrollbar */
+}
+
+.itemSection::-webkit-scrollbar-thumb:hover {
+  background-color: #666;
+}
+
+.gallery {
+  flex: 0 0 auto; /* Prevent items from stretching */
+  width: 120px; /* Adjust width for items */
+  text-align: center; /* Center content */
+}
+
+.gallery img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+
+  /* Firm Section */
   .firmSection {
-    grid-template-columns: 1fr; /* Single column layout */
-    gap: 10px; /* Reduce spacing */
-    padding: 10px; /* Reduce padding */
+    grid-template-columns: repeat(1, 1fr); /* One card per row */
+    gap: 15px; /* Adjust spacing */
+    padding: 10px;
   }
 
   .firmCard {
-    padding: 10px;
-  }
-
-  .firmDetails h4 {
-    font-size: 16px;
-  }
-
-  .firmDetails .firmCategory,
-  .firmDetails .firmPrice {
-    font-size: 12px; /* Adjust font size */
-  }
-
-  /* Product Section Adjustments */
-  .productSecssion {
-    padding: 0 15px; /* Reduce padding */
-  }
-
-  .productBox {
-    flex-direction: column; /* Stack content vertically */
-    align-items: center;
-  }
-
-  .productgropu img {
-    width: 100px; /* Smaller image size */
-  }
-
-  .addBtn {
-    position: static;
-    margin: 10px auto; /* Center the button */
-  }
-
-  /* Vendor Box Adjustments */
-  .vendorBox {
+    margin: 0 auto; /* Center the cards */
     width: 100%; /* Full width */
-    margin: 0 auto; /* Center horizontally */
   }
 
-  .firmimage img {
-    height: 150px; /* Adjust height */
+  .firmImage img {
+    height: auto; /* Maintain aspect ratio */
   }
+
+  .firmDetails {
+    text-align: center; /* Center content */
+  }
+
+  /* Product Section */
+  /* Product Section */
+.productSecssion {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  margin-top: 210px;
+}
+
+.productBox {
+  display: flex;
+  flex-direction: row; /* Default row layout with content on the left and image on the right */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  border-top: 2px solid rgba(128, 128, 128, 0.796);
+  position: relative;
+}
+
+.productgropu {
+  flex: 0 0 auto; /* Prevent the image container from stretching */
+  margin-left: 20px; /* Add some space between content and the image */
+}
+
+.productgropu img {
+  width: 130px;
+  border-radius: 5px;
+}
+
+.addBtn {
+  border: 1px solid lightgray;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  color: green;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  max-width: 80px;
+  margin-left: 22px;
+  cursor: pointer;
+}
+
+.links {
+  color: black;
+  text-decoration: none;
+}
+
+
+.links {
+  color: black;
+  text-decoration: none;
+}
+
 
   /* Loader Section */
   .loaderSection {
-    padding: 10px;
-  }
-}
-
-/* Additional Adjustments for Mobile Screens */
-@media (max-width: 768px) {
-  /* Reduce Columns for Tablets */
-  .firmSection {
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    height: 80px;
   }
 
-  .productSecssion {
-    padding: 0 20px; /* Adjust padding */
+  /* Chain Section */
+  .chainSection {
+    gap: 10px;
+  }
+
+  .vendorBox {
+    width: 90%; /* Adjust size */
+    margin: 0 auto; /* Center-align */
+  }
+
+  /* Firm Buttons */
+  .filerBtn {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .filerBtn button {
+    width: 100%; /* Full width buttons */
+  }
+
+  /* Adjust Spinner Animation */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 }
