@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Top Bar Styles */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  height: 100px;
+  
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+  color: #FC8019;
+  font-weight: bold;
+  position: fixed;
+  width: 80%;
+  min-width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: white;
+  text-decoration: none;
+}
+
+.top-bar span {
+  color: #1d2d44;
+}
+
+/* Left Section Links */
+.left-section a {
+  margin-right: 15px;
+  color: #003566;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.left-section a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+/* Center Section - Search Bar and Button */
+.center-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.center-section .search-bar {
+  padding: 10px;
+  border-radius: 1px #003566;
+  border-radius: 4px;
+  width: 250px;
+}
+
+.center-section .button {
+  padding: 10px 20px;
+  background-color: #1d2d44;
+  color: #e8e8e8;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(51, 51, 51, 0.2);
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.button::before {
+  content: "Hello!";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #7b4397, #dc2430);
+  transform: translateY(100%);
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.button::after {
+  content: "Hover me";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transform: translateY(-100%);
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.button:hover::before {
+  transform: translateY(0);
+}
+
+.button:hover::after {
+  transform: translateY(-200%);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:active {
+  scale: 0.95;
+}
+
+/* Right Section - Company Title */
+
+.right-section .company-title {
+  font-size: 1.8rem;
+  margin: 0;
+  color: orangered;
+  text-decoration: none;
+  
+}
+
+.right-section .company-title span {
+  color: black;
+  font-weight: bold;
+}
+
+
+.landiSection{
+  padding: 0 120px;
+}
+
+.itemSection{
+  display: flex;
+  margin-top: 100px;
+  width: 100%;
+}
+.gallery{
+  width: 150px;
+  
+}
+.gallery img{
+  width: 100%;
+}
+
+
+
+
+.chainContainer {
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-radius: 8px; /* Subtle rounding for the container */
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between; /* Align title to the left, buttons to the right */
+  align-items: center; /* Vertically align items */
+  margin-bottom: 20px;
+}
+
+.headerContainer h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333; /* Darker text color */
+}
+
+.scrollButtons {
+  display: flex;
+  gap: 10px; /* Add spacing between buttons */
+}
+
+.scrollButtons button {
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none; /* No borders for the buttons */
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.scrollButtons button:hover {
+  background-color: #d6d6d6;
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.chainSection {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  gap: 20px; /* Space between items */
+  padding: 10px 0;
+}
+
+.chainSection::-webkit-scrollbar {
+  height: 10px; /* Horizontal scrollbar height */
+}
+
+.chainSection::-webkit-scrollbar-thumb {
+  background-color: #aaa; /* Scrollbar thumb color */
+  border-radius: 5px; /* Rounded scrollbar */
+}
+
+.chainSection::-webkit-scrollbar-thumb:hover {
+  background-color: #888;
+}
+
+.vendorBox {
+  flex: 0 0 auto; /* Fixed size for each card */
+  width: 400px; /* Rectangle width */
+  height: auto; /* Adjust height automatically */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent; /* No background for the card */
+}
+
+.firmDetails {
+  text-align: center; /* Center-align content */
+  width: 100%; /* Full width for content */
+}
+
+.firmDetails h4 {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333; /* Darker text for the title */
+}
+
+.firmimage img {
+  width: 100%; /* Full width */
+  height: 200px; /* Fixed rectangle height */
+  object-fit: cover; /* Ensures proper image cropping */
+  display: block; /* Prevent inline spacing issues */
+  border: none; /* No borders */
+  border-radius: 4px; /* Optional: slight rounding of image corners */
+}
+
+
+
+/* General styles */
+.heading {
+  text-align: left;
+  margin: 20px 0;
+}
+
+.heading h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Firm section styles */
+.firmSection {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Firm card styles */
+.firmCard {
+  background-color: #fff;
+  border: none; /* No borders */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.firmCard:hover {
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+}
+
+/* Image styles */
+.firmImage img {
+  width: 100%;
+  height: 180px; /* Rectangle shape */
+  object-fit: cover; /* Ensures image scales properly */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Shadow below the image */
+}
+
+/* Firm details */
+.firmDetails {
+  padding: 15px;
+  text-align: left;
+}
+
+.firmDetails .firmName {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.firmDetails .firmCategory,
+.firmDetails .firmPrice,
+.firmDetails .firmDescription {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.firmPrice{
+  text-transform: uppercase;
+}
+
+.firmDetails .firmPrice {
+  font-weight: bold;
+  color: #000;
+}
+
+/* Offer shadow styles */
+.firmCard:after {
+  content: "Special Offer!";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff6347; /* Tomato color for offer tag */
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow effect for the offer */
+}
+
+
+
+/*firm buttons*/
+.filerBtn{
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.filerBtn button{
+  width: 10rem;
+  padding: 5px 0;
+  border-radius: 8px;
+}
+
+.activeButton{
+  background-color:blue;
+  color: white;
+}
+
+
+
+/*Product section*/
+
+.productSecssion{
+  display: flex;
+  flex-direction: column;
+  padding: 0 150px;
+  margin-top: 120px;
+}
+
+.productBox{
+  
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  border-top: 2px solid rgba(128, 128, 128, 0.796) ;
+  position: relative;
+ 
+}
+
+.productgropu img{
+  width: 130px;
+  border-radius: 5px;
+
+}
+
+.addBtn{
+  border: 1px solid lightgray;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  color: green;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  max-width: 80px;
+  margin-left: 22px;
+  cursor: pointer;
+  
+}
+
+.links{
+  color: black;
+  text-decoration: none;
+}
+
+
+/*loaderSection*/
+
+.loaderSection{
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .vendorBox {
+    width: 300px; /* Smaller width for tablets */
+  }
+
+  .firmimage img {
+    height: 150px; /* Adjust height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .headerContainer h3 {
+    font-size: 20px; /* Smaller font size for mobile */
+  }
+
+  .scrollButtons button {
+    padding: 6px 12px; /* Adjust padding for smaller buttons */
+    font-size: 12px; /* Smaller text size */
+  }
+
+  .vendorBox {
+    width: 250px; /* Adjust width for mobile */
+  }
+
+  .firmimage img {
+    height: 120px; /* Adjust image height for mobile */
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+  .firmSection {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .firmSection {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .firmSection {
+    grid-template-columns: 1fr; /* 1 column for mobile screens */
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 576px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .landiSection{
+    padding: 0 10px;
+  }
+  .itemSection{
+    margin-top: 100px;
+    
+
+  }
+
+  .center-section {
+    margin: 10px 0;
+  }
+}
