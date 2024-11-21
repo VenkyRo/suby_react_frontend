@@ -414,74 +414,103 @@ body {
   align-items: center;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .vendorBox {
-    width: 300px; /* Smaller width for tablets */
-  }
-
-  .firmimage img {
-    height: 150px; /* Adjust height for smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .headerContainer h3 {
-    font-size: 20px; /* Smaller font size for mobile */
-  }
-
-  .scrollButtons button {
-    padding: 6px 12px; /* Adjust padding for smaller buttons */
-    font-size: 12px; /* Smaller text size */
-  }
-
-  .vendorBox {
-    width: 250px; /* Adjust width for mobile */
-  }
-
-  .firmimage img {
-    height: 120px; /* Adjust image height for mobile */
-  }
-}
-
-
-
-@media (max-width: 1024px) {
-  .firmSection {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
-  }
-}
-
-@media (max-width: 768px) {
-  .firmSection {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .firmSection {
-    grid-template-columns: 1fr; /* 1 column for mobile screens */
-  }
-}
-
-
-/* Responsive Design */
+/* Mobile-Specific Styles */
 @media (max-width: 576px) {
+  /* Top Bar Adjustments */
   .top-bar {
     flex-direction: column;
     align-items: flex-start;
+    padding: 15px;
+    height: auto; /* Adjust height for stacking */
   }
 
-  .landiSection{
-    padding: 0 10px;
-  }
-  .itemSection{
-    margin-top: 100px;
-    
-
+  .top-bar span {
+    font-size: 16px; /* Reduce font size */
   }
 
+  .left-section a {
+    margin-right: 10px;
+    font-size: 14px; /* Smaller font */
+  }
+
+  /* Center Section - Search Bar and Button */
   .center-section {
-    margin: 10px 0;
+    flex-direction: column;
+    width: 100%; /* Full width */
+    gap: 5px;
+  }
+
+  .center-section .search-bar {
+    width: 100%; /* Full width */
+  }
+
+  .center-section .button {
+    width: 100%; /* Full width */
+  }
+
+  /* Firm Section Adjustments */
+  .firmSection {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 10px; /* Reduce spacing */
+    padding: 10px; /* Reduce padding */
+  }
+
+  .firmCard {
+    padding: 10px;
+  }
+
+  .firmDetails h4 {
+    font-size: 16px;
+  }
+
+  .firmDetails .firmCategory,
+  .firmDetails .firmPrice {
+    font-size: 12px; /* Adjust font size */
+  }
+
+  /* Product Section Adjustments */
+  .productSecssion {
+    padding: 0 15px; /* Reduce padding */
+  }
+
+  .productBox {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+  }
+
+  .productgropu img {
+    width: 100px; /* Smaller image size */
+  }
+
+  .addBtn {
+    position: static;
+    margin: 10px auto; /* Center the button */
+  }
+
+  /* Vendor Box Adjustments */
+  .vendorBox {
+    width: 100%; /* Full width */
+    margin: 0 auto; /* Center horizontally */
+  }
+
+  .firmimage img {
+    height: 150px; /* Adjust height */
+  }
+
+  /* Loader Section */
+  .loaderSection {
+    padding: 10px;
+  }
+}
+
+/* Additional Adjustments for Mobile Screens */
+@media (max-width: 768px) {
+  /* Reduce Columns for Tablets */
+  .firmSection {
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+  }
+
+  .productSecssion {
+    padding: 0 20px; /* Adjust padding */
   }
 }
